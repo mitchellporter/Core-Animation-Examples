@@ -32,7 +32,8 @@
 {
     // Setup the animation controller classes array
     self.animationControllerClasses = [[NSMutableArray alloc] initWithArray:@[@"PulseButton1",
-                                                                              @"CAKeyFrameVictorBaro"
+                                                                              @"CAKeyFrameVictorBaro",
+                                                                              @"LineBounceVictorBaro"
                                                                               ]];
 }
 

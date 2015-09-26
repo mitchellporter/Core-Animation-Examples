@@ -11,6 +11,7 @@
 #import "MPAnimationCell.h"
 #import "MPPulseButtonController.h"
 #import "MPKeyFrameAnimationVictorBaroController.h"
+#import "MPLineBounceVictorBaroController.h"
 
 @interface MPAnimationExamplesController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -68,6 +69,10 @@
     } else if ([selectdAnimation isEqualToString:@"CAKeyFrameVictorBaro"]) {
         // Push keyframe victor baro controller
         MPKeyFrameAnimationVictorBaroController *controller = [[MPKeyFrameAnimationVictorBaroController alloc] initWithNibName:@"MPKeyFrameAnimationVictorBaroController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+    } else if ([selectdAnimation isEqualToString:@"LineBounceVictorBaro"]) {
+        // Push line bounce victor baro controller
+        MPLineBounceVictorBaroController *controller = [[MPLineBounceVictorBaroController alloc] initWithNibName:@"MPLineBounceVictorBaroController" bundle:nil];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

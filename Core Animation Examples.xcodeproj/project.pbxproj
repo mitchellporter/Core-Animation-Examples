@@ -128,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C38575C51BB64E1D00B3F0DE /* Launch Screen */,
-				C38575D91BB66B6000B3F0DE /* Animation Examples */,
+				C38575D91BB66B6000B3F0DE /* Animation Examples - Main Controller */,
 				C38575CF1BB6563000B3F0DE /* Pulse Button - Victor Baro */,
 				C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */,
 				C333864B1BB744BE00A31F1D /* Line Bounce - Victor Baro */,
@@ -186,14 +186,14 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		C38575D91BB66B6000B3F0DE /* Animation Examples */ = {
+		C38575D91BB66B6000B3F0DE /* Animation Examples - Main Controller */ = {
 			isa = PBXGroup;
 			children = (
 				C38575B91BB64D7500B3F0DE /* MPAnimationExamplesController.h */,
 				C38575BA1BB64D7500B3F0DE /* MPAnimationExamplesController.m */,
 				C38575BB1BB64D7500B3F0DE /* MPAnimationExamplesController.xib */,
 			);
-			name = "Animation Examples";
+			name = "Animation Examples - Main Controller";
 			sourceTree = "<group>";
 		};
 		C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */ = {
