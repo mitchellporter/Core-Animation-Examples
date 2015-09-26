@@ -28,6 +28,24 @@
     return self;
 }
 
-
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+    //1
+    self.internalCircle = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(self.bounds, 15, 15)];
+    [self.internalColor setFill];
+    [self.internalCircle fill];
+    
+    //2
+    self.externalCircle = [UIBezierPath bezierPathWithOvalInRect:CGRectInset(self.bounds, 8, 8)];
+    [self.externalColor setStroke];
+    self.externalCircle.lineWidth = 4.0;
+    [self.externalCircle stroke];
+    
+    //3
+    if (!self.waveCircle) {
+        [self addWaveLayer];
+    }
+}
 
 @end
