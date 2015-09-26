@@ -11,12 +11,23 @@
 
 @implementation VBFButton
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (id)initWithFrame:(CGRect)frame
+{
+    return [self initWithFrame:frame internalColor:[UIColor blackColor] externalColor:[UIColor blackColor]];
 }
-*/
+
+- (id)initWithFrame:(CGRect)frame internalColor:(UIColor *)internalColor externalColor:(UIColor *)externalColor
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        self.backgroundColor = [UIColor clearColor];
+        self.internalColor = internalColor;
+        self.externalColor = externalColor;
+    }
+    return self;
+}
+
+
 
 @end
