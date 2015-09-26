@@ -66,4 +66,40 @@
     [self.layer addSublayer:self.waveCircle];
 }
 
+- (void)animateWave
+{
+    //1
+    CABasicAnimation *fadeOutAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    fadeOutAnimation.fromValue = [NSNumber numberWithFloat:1.0f];
+    fadeOutAnimation.toValue = [NSNumber numberWithFloat:0.0f];
+    
+    //2
+    CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    scale.fromValue = [NSNumber numberWithFloat:1.0f];
+    scale.toValue = [NSNumber numberWithFloat:1.6f];
+    
+    //3
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.fillMode = kCAFillModeForwards;
+    group.removedOnCompletion = NO;
+    group.animations = @[fadeOutAnimation, scale];
+    group.duration = 0.5;
+    
+    [self.waveCircle addAnimation:group forKey:@"trans+opacityAnimation"];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
