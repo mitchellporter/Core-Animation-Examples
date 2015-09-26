@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C33386491BB744BB00A31F1D /* MPLineBounceVictorBaroController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33386471BB744BB00A31F1D /* MPLineBounceVictorBaroController.m */; settings = {ASSET_TAGS = (); }; };
+		C333864A1BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33386481BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib */; settings = {ASSET_TAGS = (); }; };
 		C38575A41BB64D0100B3F0DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575A31BB64D0100B3F0DE /* main.m */; };
 		C38575A71BB64D0100B3F0DE /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575A61BB64D0100B3F0DE /* MPAppDelegate.m */; };
 		C38575AD1BB64D0100B3F0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38575AB1BB64D0100B3F0DE /* Main.storyboard */; };
@@ -26,6 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C33386461BB744BB00A31F1D /* MPLineBounceVictorBaroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPLineBounceVictorBaroController.h; sourceTree = "<group>"; };
+		C33386471BB744BB00A31F1D /* MPLineBounceVictorBaroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPLineBounceVictorBaroController.m; sourceTree = "<group>"; };
+		C33386481BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPLineBounceVictorBaroController.xib; sourceTree = "<group>"; };
 		C385759F1BB64D0100B3F0DE /* Core Animation Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Animation Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38575A31BB64D0100B3F0DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C38575A51BB64D0100B3F0DE /* MPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
@@ -65,6 +70,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C333864B1BB744BE00A31F1D /* Line Bounce - Victor Baro */ = {
+			isa = PBXGroup;
+			children = (
+				C33386461BB744BB00A31F1D /* MPLineBounceVictorBaroController.h */,
+				C33386471BB744BB00A31F1D /* MPLineBounceVictorBaroController.m */,
+				C33386481BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib */,
+			);
+			name = "Line Bounce - Victor Baro";
+			sourceTree = "<group>";
+		};
 		C38575961BB64D0100B3F0DE = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +126,7 @@
 				C38575D91BB66B6000B3F0DE /* Animation Examples */,
 				C38575CF1BB6563000B3F0DE /* Pulse Button - Victor Baro */,
 				C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */,
+				C333864B1BB744BE00A31F1D /* Line Bounce - Victor Baro */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -247,6 +263,7 @@
 				C38575C41BB64E1100B3F0DE /* MPLaunchScreenController.xib in Resources */,
 				C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */,
 				C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */,
+				C333864A1BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib in Resources */,
 				C38575BD1BB64D7500B3F0DE /* MPAnimationExamplesController.xib in Resources */,
 				C38575AD1BB64D0100B3F0DE /* Main.storyboard in Resources */,
 			);
@@ -260,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38575D81BB65DC700B3F0DE /* VBFButton.m in Sources */,
+				C33386491BB744BB00A31F1D /* MPLineBounceVictorBaroController.m in Sources */,
 				C38575DD1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m in Sources */,
 				C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */,
 				C38575BC1BB64D7500B3F0DE /* MPAnimationExamplesController.m in Sources */,
@@ -406,6 +424,7 @@
 				C38575B81BB64D0100B3F0DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
