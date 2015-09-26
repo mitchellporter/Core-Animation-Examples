@@ -10,6 +10,9 @@
 		C33386491BB744BB00A31F1D /* MPLineBounceVictorBaroController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33386471BB744BB00A31F1D /* MPLineBounceVictorBaroController.m */; settings = {ASSET_TAGS = (); }; };
 		C333864A1BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33386481BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib */; settings = {ASSET_TAGS = (); }; };
 		C333864E1BB7453900A31F1D /* VBFBezierLine.m in Sources */ = {isa = PBXBuildFile; fileRef = C333864D1BB7453900A31F1D /* VBFBezierLine.m */; settings = {ASSET_TAGS = (); }; };
+		C33386571BB74F4F00A31F1D /* MPModalDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = C33386551BB74F4F00A31F1D /* MPModalDisplayController.m */; settings = {ASSET_TAGS = (); }; };
+		C33386581BB74F4F00A31F1D /* MPModalDisplayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C33386561BB74F4F00A31F1D /* MPModalDisplayController.xib */; settings = {ASSET_TAGS = (); }; };
+		C333865B1BB74F7400A31F1D /* MPWelcomeModal.m in Sources */ = {isa = PBXBuildFile; fileRef = C333865A1BB74F7400A31F1D /* MPWelcomeModal.m */; settings = {ASSET_TAGS = (); }; };
 		C38575A41BB64D0100B3F0DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575A31BB64D0100B3F0DE /* main.m */; };
 		C38575A71BB64D0100B3F0DE /* MPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575A61BB64D0100B3F0DE /* MPAppDelegate.m */; };
 		C38575AD1BB64D0100B3F0DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C38575AB1BB64D0100B3F0DE /* Main.storyboard */; };
@@ -34,6 +37,11 @@
 		C33386481BB744BB00A31F1D /* MPLineBounceVictorBaroController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPLineBounceVictorBaroController.xib; sourceTree = "<group>"; };
 		C333864C1BB7453900A31F1D /* VBFBezierLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFBezierLine.h; sourceTree = "<group>"; };
 		C333864D1BB7453900A31F1D /* VBFBezierLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFBezierLine.m; sourceTree = "<group>"; };
+		C33386541BB74F4F00A31F1D /* MPModalDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPModalDisplayController.h; sourceTree = "<group>"; };
+		C33386551BB74F4F00A31F1D /* MPModalDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPModalDisplayController.m; sourceTree = "<group>"; };
+		C33386561BB74F4F00A31F1D /* MPModalDisplayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPModalDisplayController.xib; sourceTree = "<group>"; };
+		C33386591BB74F7400A31F1D /* MPWelcomeModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPWelcomeModal.h; sourceTree = "<group>"; };
+		C333865A1BB74F7400A31F1D /* MPWelcomeModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPWelcomeModal.m; sourceTree = "<group>"; };
 		C385759F1BB64D0100B3F0DE /* Core Animation Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Core Animation Examples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38575A31BB64D0100B3F0DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C38575A51BB64D0100B3F0DE /* MPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPAppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +93,18 @@
 			name = "Line Bounce - Victor Baro";
 			sourceTree = "<group>";
 		};
+		C333865C1BB74FC900A31F1D /* Welcome Modal - Mitchell Porter */ = {
+			isa = PBXGroup;
+			children = (
+				C33386541BB74F4F00A31F1D /* MPModalDisplayController.h */,
+				C33386551BB74F4F00A31F1D /* MPModalDisplayController.m */,
+				C33386561BB74F4F00A31F1D /* MPModalDisplayController.xib */,
+				C33386591BB74F7400A31F1D /* MPWelcomeModal.h */,
+				C333865A1BB74F7400A31F1D /* MPWelcomeModal.m */,
+			);
+			name = "Welcome Modal - Mitchell Porter";
+			sourceTree = "<group>";
+		};
 		C38575961BB64D0100B3F0DE = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +152,7 @@
 				C38575CF1BB6563000B3F0DE /* Pulse Button - Victor Baro */,
 				C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */,
 				C333864B1BB744BE00A31F1D /* Line Bounce - Victor Baro */,
+				C333865C1BB74FC900A31F1D /* Welcome Modal - Mitchell Porter */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38575AF1BB64D0100B3F0DE /* Assets.xcassets in Resources */,
+				C33386581BB74F4F00A31F1D /* MPModalDisplayController.xib in Resources */,
 				C38575DE1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib in Resources */,
 				C38575C41BB64E1100B3F0DE /* MPLaunchScreenController.xib in Resources */,
 				C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */,
@@ -286,10 +308,12 @@
 				C33386491BB744BB00A31F1D /* MPLineBounceVictorBaroController.m in Sources */,
 				C38575DD1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m in Sources */,
 				C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */,
+				C33386571BB74F4F00A31F1D /* MPModalDisplayController.m in Sources */,
 				C38575BC1BB64D7500B3F0DE /* MPAnimationExamplesController.m in Sources */,
 				C38575C31BB64E1100B3F0DE /* MPLaunchScreenController.m in Sources */,
 				C38575A71BB64D0100B3F0DE /* MPAppDelegate.m in Sources */,
 				C38575CD1BB6562100B3F0DE /* MPPulseButtonController.m in Sources */,
+				C333865B1BB74F7400A31F1D /* MPWelcomeModal.m in Sources */,
 				C38575A41BB64D0100B3F0DE /* main.m in Sources */,
 				C38575D31BB658C200B3F0DE /* MPAnimationCell.m in Sources */,
 			);
