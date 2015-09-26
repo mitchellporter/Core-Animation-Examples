@@ -23,8 +23,27 @@
 {
     [super viewDidLoad];
     
+    [self addEntranceAnimationToLayer:self.imageView1.layer withDelay:0.5];
+    [self addEntranceAnimationToLayer:self.imageView2.layer withDelay:0.8];
     
+}
+
+- (void)addEntranceAnimationToLayer:(CALayer *)aLayer withDelay:(CGFloat)aDelay
+{
+    CAKeyframeAnimation *trans = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
     
+    NSArray *values = @[@(-300), @(40), @(0)];
+    trans.values = values;
+    
+    NSArray *times = @[@(0.0), @(0.85), @(1)];
+    trans.keyTimes = times;
+    trans.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    trans.duration = 0.8;
+    trans.removedOnCompletion = NO;
+    trans.fillMode = kCAFillModeBackwards;
+    trans.beginTime = CACurrentMediaTime() + aDelay;
+    [aLayer addAnimation:trans forKey:@"entrance"];
 }
 
 - (IBAction)show:(id)sender
