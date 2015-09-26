@@ -20,6 +20,7 @@
 		C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575CC1BB6562100B3F0DE /* MPPulseButtonController.xib */; settings = {ASSET_TAGS = (); }; };
 		C38575D31BB658C200B3F0DE /* MPAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575D11BB658C200B3F0DE /* MPAnimationCell.m */; settings = {ASSET_TAGS = (); }; };
 		C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */; settings = {ASSET_TAGS = (); }; };
+		C38575D81BB65DC700B3F0DE /* VBFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575D71BB65DC700B3F0DE /* VBFButton.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		C38575D01BB658C200B3F0DE /* MPAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAnimationCell.h; sourceTree = "<group>"; };
 		C38575D11BB658C200B3F0DE /* MPAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAnimationCell.m; sourceTree = "<group>"; };
 		C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAnimationCell.xib; sourceTree = "<group>"; };
+		C38575D61BB65DC700B3F0DE /* VBFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFButton.h; sourceTree = "<group>"; };
+		C38575D71BB65DC700B3F0DE /* VBFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 				C38575CA1BB6562100B3F0DE /* MPPulseButtonController.h */,
 				C38575CB1BB6562100B3F0DE /* MPPulseButtonController.m */,
 				C38575CC1BB6562100B3F0DE /* MPPulseButtonController.xib */,
+				C38575D61BB65DC700B3F0DE /* VBFButton.h */,
+				C38575D71BB65DC700B3F0DE /* VBFButton.m */,
 			);
 			name = "Pulse Button";
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38575D81BB65DC700B3F0DE /* VBFButton.m in Sources */,
 				C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */,
 				C38575BC1BB64D7500B3F0DE /* MPAnimationExamplesController.m in Sources */,
 				C38575C31BB64E1100B3F0DE /* MPLaunchScreenController.m in Sources */,
