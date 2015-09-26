@@ -8,8 +8,9 @@
 
 #import "MPAnimationExamplesController.h"
 #import "MPAnimationsManager.h"
-#import "MPPulseButtonController.h"
 #import "MPAnimationCell.h"
+#import "MPPulseButtonController.h"
+#import "MPKeyFrameAnimationVictorBaroController.h"
 
 @interface MPAnimationExamplesController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -61,8 +62,13 @@
     if ([selectdAnimation isEqualToString:@"PulseButton1"]) {
         
         // Push pulse button controller
-        MPPulseButtonController *pulseButtonController = [[MPPulseButtonController alloc] initWithNibName:@"MPPulseButtonController" bundle:nil];
-        [self.navigationController pushViewController:pulseButtonController animated:YES];
+        MPPulseButtonController *controller = [[MPPulseButtonController alloc] initWithNibName:@"MPPulseButtonController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
+        
+    } else if ([selectdAnimation isEqualToString:@"CAKeyFrameVictorBaro"]) {
+        // Push keyframe victor baro controller
+        MPKeyFrameAnimationVictorBaroController *controller = [[MPKeyFrameAnimationVictorBaroController alloc] initWithNibName:@"MPKeyFrameAnimationVictorBaroController" bundle:nil];
+        [self.navigationController pushViewController:controller animated:YES];
     }
 }
 
