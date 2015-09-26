@@ -9,6 +9,12 @@
 #import "VBFButton.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface VBFButton ()
+
+@property CAShapeLayer *waveCircle;
+
+@end
+
 @implementation VBFButton
 
 - (id)initWithFrame:(CGRect)frame
@@ -46,6 +52,18 @@
     if (!self.waveCircle) {
         [self addWaveLayer];
     }
+}
+
+- (void)addWaveLayer
+{
+    self.waveCircle = [CAShapeLayer layer];
+    self.waveCircle.frame = self.bounds;
+    self.waveCircle.path = self.externalCircle.CGPath;
+    self.waveCircle.strokeColor = self.externalColor.CGColor;
+    self.waveCircle.lineWidth = 3.0f;
+    self.waveCircle.fillColor = [UIColor clearColor].CGColor;
+    
+    [self.layer addSublayer:self.waveCircle];
 }
 
 @end
