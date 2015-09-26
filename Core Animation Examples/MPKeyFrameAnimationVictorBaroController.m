@@ -75,6 +75,27 @@
     [aLayer addAnimation:group forKey:@"hide"];
 }
 
+
+- (void)addPopAnimationToLayer:(CALayer *)aLayer withBounce:(CGFloat)bounce damp:(CGFloat)damp
+{
+    // TESTIED WITH BOUNCE 0.2, DAMP = 0.055
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = 1;
+    
+    int steps = 100;
+    NSMutableArray *values = [NSMutableArray arrayWithCapacity:steps];
+    double value = 0;
+    float e = 2.71;
+    
+    for (int t = 0; t < 100; t++) {
+        value = pow(e, -damp*t) * sin(bounce*t) + 1;
+        [values addObject:[NSNumber numberWithFloat:value]];
+    }
+    animation.values = values;
+    [aLayer addAnimation:animation forKey:@"appear"];
+}
+
 - (IBAction)show:(id)sender
 {
     
@@ -88,7 +109,8 @@
 
 - (IBAction)pop:(id)sender
 {
-    
+    [self addPopAnimationToLayer:self.imageView1.layer withBounce:0.2 damp:0.055];
+    [self addPopAnimationToLayer:self.imageView2.layer withBounce:0.2 damp:0.055];
 }
 
 - (IBAction)path:(id)sender
