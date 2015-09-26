@@ -122,7 +122,11 @@
     // but in the first "center", he shows the math needed to calculate the center of the layer
     CGPoint center = CGPointMake(aLayer.frame.origin.x+ aLayer.frame.size.width/2, aLayer.frame.origin.y + aLayer.frame.size.height/2);
     CGPoint center2 = aLayer.position;
+    
+    // By reducing the radius we make the circle path smaller
+    // and then increase to make it bigger.
     CGFloat radius = 100.0f;
+    CGFloat radius2 = 10.0f;
     
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(center.x- radius, center.y) radius:radius startAngle:0 endAngle:2*M_PI clockwise:YES];
     return path;
