@@ -85,7 +85,26 @@
     group.animations = @[fadeOutAnimation, scale];
     group.duration = 0.5;
     
+    // Optional properties you added yourself
+    // Have some fun with these
+    group.autoreverses = YES;
+    group.repeatCount = HUGE_VALF;
+    
     [self.waveCircle addAnimation:group forKey:@"trans+opacityAnimation"];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    for (UITouch *touch in touches) {
+        
+        CGPoint pointTouched = [touch locationInView:self];
+        CGRect touchableArea = CGRectInset(self.bounds, 10, 10);
+        
+        if (CGRectContainsPoint(touchableArea, pointTouched)) {
+            NSLog(@"Touch inside");
+            [self animateWave];
+        }
+    }
 }
 
 
