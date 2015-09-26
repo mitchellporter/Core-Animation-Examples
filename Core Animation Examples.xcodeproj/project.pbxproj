@@ -21,6 +21,8 @@
 		C38575D31BB658C200B3F0DE /* MPAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575D11BB658C200B3F0DE /* MPAnimationCell.m */; settings = {ASSET_TAGS = (); }; };
 		C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */; settings = {ASSET_TAGS = (); }; };
 		C38575D81BB65DC700B3F0DE /* VBFButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575D71BB65DC700B3F0DE /* VBFButton.m */; settings = {ASSET_TAGS = (); }; };
+		C38575DD1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575DB1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m */; settings = {ASSET_TAGS = (); }; };
+		C38575DE1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575DC1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,9 @@
 		C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAnimationCell.xib; sourceTree = "<group>"; };
 		C38575D61BB65DC700B3F0DE /* VBFButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBFButton.h; sourceTree = "<group>"; };
 		C38575D71BB65DC700B3F0DE /* VBFButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBFButton.m; sourceTree = "<group>"; };
+		C38575DA1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPKeyFrameAnimationVictorBaroController.h; sourceTree = "<group>"; };
+		C38575DB1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPKeyFrameAnimationVictorBaroController.m; sourceTree = "<group>"; };
+		C38575DC1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPKeyFrameAnimationVictorBaroController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				C38575C51BB64E1D00B3F0DE /* Launch Screen */,
-				C38575B91BB64D7500B3F0DE /* MPAnimationExamplesController.h */,
-				C38575BA1BB64D7500B3F0DE /* MPAnimationExamplesController.m */,
-				C38575BB1BB64D7500B3F0DE /* MPAnimationExamplesController.xib */,
-				C38575CF1BB6563000B3F0DE /* Pulse Button */,
+				C38575D91BB66B6000B3F0DE /* Animation Examples */,
+				C38575CF1BB6563000B3F0DE /* Pulse Button - Victor Baro */,
+				C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -139,7 +143,7 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		C38575CF1BB6563000B3F0DE /* Pulse Button */ = {
+		C38575CF1BB6563000B3F0DE /* Pulse Button - Victor Baro */ = {
 			isa = PBXGroup;
 			children = (
 				C38575CA1BB6562100B3F0DE /* MPPulseButtonController.h */,
@@ -148,7 +152,7 @@
 				C38575D61BB65DC700B3F0DE /* VBFButton.h */,
 				C38575D71BB65DC700B3F0DE /* VBFButton.m */,
 			);
-			name = "Pulse Button";
+			name = "Pulse Button - Victor Baro";
 			sourceTree = "<group>";
 		};
 		C38575D51BB658C500B3F0DE /* Views */ = {
@@ -159,6 +163,26 @@
 				C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		C38575D91BB66B6000B3F0DE /* Animation Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C38575B91BB64D7500B3F0DE /* MPAnimationExamplesController.h */,
+				C38575BA1BB64D7500B3F0DE /* MPAnimationExamplesController.m */,
+				C38575BB1BB64D7500B3F0DE /* MPAnimationExamplesController.xib */,
+			);
+			name = "Animation Examples";
+			sourceTree = "<group>";
+		};
+		C38575DF1BB66BBF00B3F0DE /* CAKeyFrame - Victor Baro */ = {
+			isa = PBXGroup;
+			children = (
+				C38575DA1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.h */,
+				C38575DB1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m */,
+				C38575DC1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib */,
+			);
+			name = "CAKeyFrame - Victor Baro";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38575AF1BB64D0100B3F0DE /* Assets.xcassets in Resources */,
+				C38575DE1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.xib in Resources */,
 				C38575C41BB64E1100B3F0DE /* MPLaunchScreenController.xib in Resources */,
 				C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */,
 				C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */,
@@ -235,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C38575D81BB65DC700B3F0DE /* VBFButton.m in Sources */,
+				C38575DD1BB66BB400B3F0DE /* MPKeyFrameAnimationVictorBaroController.m in Sources */,
 				C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */,
 				C38575BC1BB64D7500B3F0DE /* MPAnimationExamplesController.m in Sources */,
 				C38575C31BB64E1100B3F0DE /* MPLaunchScreenController.m in Sources */,
