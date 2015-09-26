@@ -12,6 +12,9 @@
 
 @interface MPKeyFrameAnimationVictorBaroController ()
 
+@property (nonatomic, retain) IBOutlet UIImageView *imageView1;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView2;
+
 @end
 
 @implementation MPKeyFrameAnimationVictorBaroController
@@ -19,7 +22,29 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    
+}
+
+- (IBAction)show:(id)sender
+{
+    
+}
+
+- (IBAction)hide:(id)sender
+{
+    
+}
+
+- (IBAction)pop:(id)sender
+{
+    
+}
+
+- (IBAction)path:(id)sender
+{
+    
 }
 
 @end
