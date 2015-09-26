@@ -46,6 +46,35 @@
     [aLayer addAnimation:trans forKey:@"entrance"];
 }
 
+- (void)addHideAnimationToLayer:(CALayer *)aLayer withDelay:(CGFloat)aDelay
+{
+    // Translation Animation
+    CAKeyframeAnimation *trans = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
+    
+    NSArray *transValues = @[@(0), @(2), @(-50), @(0)];
+    trans.values = transValues;
+    NSArray *times = @[@(0.0), @(0.1), @(0.8), @(1)];
+    trans.keyTimes = times;
+    
+    // Opacity Animation
+    CAKeyframeAnimation *opacity = [CAKeyframeAnimation animationWithKeyPath:@"opacity"];
+    
+    NSArray *opValues = @[@(1.0), @(1.0), @(0.6), @(0.0)];
+    opacity.values = opValues;
+    opacity.keyTimes = times;
+    
+    // Group Animations
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[trans, opacity];
+    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    group.duration = 0.6;
+    group.removedOnCompletion = NO;
+    group.fillMode = kCAFillModeForwards;
+    group.beginTime = CACurrentMediaTime() + aDelay;
+    
+    [aLayer addAnimation:group forKey:@"hide"];
+}
+
 - (IBAction)show:(id)sender
 {
     
@@ -53,7 +82,8 @@
 
 - (IBAction)hide:(id)sender
 {
-    
+    [self addHideAnimationToLayer:self.imageView1.layer withDelay:0.5];
+    [self addHideAnimationToLayer:self.imageView2.layer withDelay:0.8];
 }
 
 - (IBAction)pop:(id)sender
