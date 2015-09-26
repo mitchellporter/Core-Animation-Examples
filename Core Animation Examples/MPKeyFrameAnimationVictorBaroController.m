@@ -96,6 +96,38 @@
     [aLayer addAnimation:animation forKey:@"appear"];
 }
 
+- (void)addPathAnimationToLayer:(CALayer *)aLayer
+{
+    CAKeyframeAnimation *trans = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+    
+    trans.path = [self getPathForLayer:aLayer].CGPath;
+    
+    trans.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    trans.duration = 0.8;
+    trans.removedOnCompletion = NO;
+    trans.fillMode = kCAFillModeForwards;
+    
+    // Added these yourself
+    trans.repeatCount = HUGE_VALF;
+    trans.autoreverses = YES;
+    
+    
+    [aLayer addAnimation:trans forKey:@"path"];
+}
+
+- (UIBezierPath *)getPathForLayer:(CALayer *)aLayer
+{
+    // Fun note: You chose to just set the position for center2 cause it's the same,
+    // but in the first "center", he shows the math needed to calculate the center of the layer
+    CGPoint center = CGPointMake(aLayer.frame.origin.x+ aLayer.frame.size.width/2, aLayer.frame.origin.y + aLayer.frame.size.height/2);
+    CGPoint center2 = aLayer.position;
+    CGFloat radius = 100.0f;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(center.x- radius, center.y) radius:radius startAngle:0 endAngle:2*M_PI clockwise:YES];
+    return path;
+}
+
 - (IBAction)show:(id)sender
 {
     
@@ -115,7 +147,7 @@
 
 - (IBAction)path:(id)sender
 {
-    
+    [self addPathAnimationToLayer:self.imageView1.layer];
 }
 
 @end
