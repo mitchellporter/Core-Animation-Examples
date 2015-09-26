@@ -15,6 +15,11 @@
 		C38575BD1BB64D7500B3F0DE /* MPAnimationExamplesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575BB1BB64D7500B3F0DE /* MPAnimationExamplesController.xib */; settings = {ASSET_TAGS = (); }; };
 		C38575C31BB64E1100B3F0DE /* MPLaunchScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575C11BB64E1100B3F0DE /* MPLaunchScreenController.m */; settings = {ASSET_TAGS = (); }; };
 		C38575C41BB64E1100B3F0DE /* MPLaunchScreenController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575C21BB64E1100B3F0DE /* MPLaunchScreenController.xib */; settings = {ASSET_TAGS = (); }; };
+		C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575C71BB651DE00B3F0DE /* MPAnimationsManager.m */; settings = {ASSET_TAGS = (); }; };
+		C38575CD1BB6562100B3F0DE /* MPPulseButtonController.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575CB1BB6562100B3F0DE /* MPPulseButtonController.m */; settings = {ASSET_TAGS = (); }; };
+		C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575CC1BB6562100B3F0DE /* MPPulseButtonController.xib */; settings = {ASSET_TAGS = (); }; };
+		C38575D31BB658C200B3F0DE /* MPAnimationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C38575D11BB658C200B3F0DE /* MPAnimationCell.m */; settings = {ASSET_TAGS = (); }; };
+		C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,14 @@
 		C38575C01BB64E1100B3F0DE /* MPLaunchScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPLaunchScreenController.h; path = ../MPLaunchScreenController.h; sourceTree = "<group>"; };
 		C38575C11BB64E1100B3F0DE /* MPLaunchScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPLaunchScreenController.m; path = ../MPLaunchScreenController.m; sourceTree = "<group>"; };
 		C38575C21BB64E1100B3F0DE /* MPLaunchScreenController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MPLaunchScreenController.xib; path = ../MPLaunchScreenController.xib; sourceTree = "<group>"; };
+		C38575C61BB651DE00B3F0DE /* MPAnimationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAnimationsManager.h; sourceTree = "<group>"; };
+		C38575C71BB651DE00B3F0DE /* MPAnimationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAnimationsManager.m; sourceTree = "<group>"; };
+		C38575CA1BB6562100B3F0DE /* MPPulseButtonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPPulseButtonController.h; sourceTree = "<group>"; };
+		C38575CB1BB6562100B3F0DE /* MPPulseButtonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPPulseButtonController.m; sourceTree = "<group>"; };
+		C38575CC1BB6562100B3F0DE /* MPPulseButtonController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPPulseButtonController.xib; sourceTree = "<group>"; };
+		C38575D01BB658C200B3F0DE /* MPAnimationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MPAnimationCell.h; sourceTree = "<group>"; };
+		C38575D11BB658C200B3F0DE /* MPAnimationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MPAnimationCell.m; sourceTree = "<group>"; };
+		C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPAnimationCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				C38575BF1BB64D9400B3F0DE /* Delegates */,
+				C38575C91BB651E200B3F0DE /* Models */,
+				C38575D51BB658C500B3F0DE /* Views */,
 				C38575BE1BB64D8C00B3F0DE /* Controllers */,
 				C38575AE1BB64D0100B3F0DE /* Assets.xcassets */,
 				C38575B31BB64D0100B3F0DE /* Info.plist */,
@@ -88,6 +103,7 @@
 				C38575B91BB64D7500B3F0DE /* MPAnimationExamplesController.h */,
 				C38575BA1BB64D7500B3F0DE /* MPAnimationExamplesController.m */,
 				C38575BB1BB64D7500B3F0DE /* MPAnimationExamplesController.xib */,
+				C38575CF1BB6563000B3F0DE /* Pulse Button */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +125,35 @@
 				C38575C21BB64E1100B3F0DE /* MPLaunchScreenController.xib */,
 			);
 			name = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		C38575C91BB651E200B3F0DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C38575C61BB651DE00B3F0DE /* MPAnimationsManager.h */,
+				C38575C71BB651DE00B3F0DE /* MPAnimationsManager.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C38575CF1BB6563000B3F0DE /* Pulse Button */ = {
+			isa = PBXGroup;
+			children = (
+				C38575CA1BB6562100B3F0DE /* MPPulseButtonController.h */,
+				C38575CB1BB6562100B3F0DE /* MPPulseButtonController.m */,
+				C38575CC1BB6562100B3F0DE /* MPPulseButtonController.xib */,
+			);
+			name = "Pulse Button";
+			sourceTree = "<group>";
+		};
+		C38575D51BB658C500B3F0DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C38575D01BB658C200B3F0DE /* MPAnimationCell.h */,
+				C38575D11BB658C200B3F0DE /* MPAnimationCell.m */,
+				C38575D21BB658C200B3F0DE /* MPAnimationCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +215,8 @@
 			files = (
 				C38575AF1BB64D0100B3F0DE /* Assets.xcassets in Resources */,
 				C38575C41BB64E1100B3F0DE /* MPLaunchScreenController.xib in Resources */,
+				C38575CE1BB6562100B3F0DE /* MPPulseButtonController.xib in Resources */,
+				C38575D41BB658C200B3F0DE /* MPAnimationCell.xib in Resources */,
 				C38575BD1BB64D7500B3F0DE /* MPAnimationExamplesController.xib in Resources */,
 				C38575AD1BB64D0100B3F0DE /* Main.storyboard in Resources */,
 			);
@@ -182,10 +229,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38575C81BB651DE00B3F0DE /* MPAnimationsManager.m in Sources */,
 				C38575BC1BB64D7500B3F0DE /* MPAnimationExamplesController.m in Sources */,
 				C38575C31BB64E1100B3F0DE /* MPLaunchScreenController.m in Sources */,
 				C38575A71BB64D0100B3F0DE /* MPAppDelegate.m in Sources */,
+				C38575CD1BB6562100B3F0DE /* MPPulseButtonController.m in Sources */,
 				C38575A41BB64D0100B3F0DE /* main.m in Sources */,
+				C38575D31BB658C200B3F0DE /* MPAnimationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

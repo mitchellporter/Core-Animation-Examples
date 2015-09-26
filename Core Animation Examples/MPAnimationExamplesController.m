@@ -7,10 +7,14 @@
 //
 
 #import "MPAnimationExamplesController.h"
+#import "MPAnimationsManager.h"
+#import "MPPulseButtonController.h"
+#import "MPAnimationCell.h"
 
 @interface MPAnimationExamplesController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property MPAnimationsManager *animationsManager;
 
 @end
 
@@ -21,7 +25,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    // Setup table view
+    [self.tableView registerNib:[UINib nibWithNibName:@"MPAnimationCell" bundle:nil] forCellReuseIdentifier:@"cell"];
+    
+    // Create datasource
+    self.animationsManager = [[MPAnimationsManager alloc] init];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table View
@@ -33,12 +44,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return nil;
+    return self.animationsManager.animationControllerClasses.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    MPAnimationCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.label.text = self.animationsManager.animationControllerClasses[indexPath.row];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *selectdAnimation = self.animationsManager.animationControllerClasses[indexPath.row];
+    
+    if ([selectdAnimation isEqualToString:@"PulseButton1"]) {
+        
+        // Push pulse button controller
+        MPPulseButtonController *pulseButtonController = [[MPPulseButtonController alloc] initWithNibName:@"MPPulseButtonController" bundle:nil];
+        [self.navigationController pushViewController:pulseButtonController animated:YES];
+    }
 }
 
 @end
