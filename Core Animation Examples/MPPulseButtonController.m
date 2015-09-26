@@ -6,6 +6,8 @@
 //  Copyright © 2015 Mitchell Porter. All rights reserved.
 //
 
+// Source: http://www.migueldiazrubio.com/2013/08/02/desarrollo-ios-creando-nuestros-propios-controles-con-core-animation/
+
 #import "MPPulseButtonController.h"
 
 @interface MPPulseButtonController ()
@@ -17,7 +19,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 
