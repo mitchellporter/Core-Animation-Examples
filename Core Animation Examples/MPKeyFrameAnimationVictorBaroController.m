@@ -31,7 +31,6 @@
 - (void)addEntranceAnimationToLayer:(CALayer *)aLayer withDelay:(CGFloat)aDelay
 {
     CAKeyframeAnimation *trans = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.x"];
-    
     NSArray *values = @[@(-300), @(40), @(0)];
     trans.values = values;
     

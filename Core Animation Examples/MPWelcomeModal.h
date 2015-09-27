@@ -11,6 +11,7 @@
 @interface MPWelcomeModal : UIView
 
 - (void)display;
+- (void)displayKeyFrame;
 - (void)dismiss;
 
 @end

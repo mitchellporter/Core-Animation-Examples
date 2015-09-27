@@ -34,6 +34,11 @@
     [self.welcomeModal display];
 }
 
+- (IBAction)showWelcomeModalKeyFrame:(id)sender
+{
+    [self.welcomeModal displayKeyFrame];
+}
+
 - (IBAction)dismissWelcomeModal:(id)sender
 {
     [self.welcomeModal dismiss];

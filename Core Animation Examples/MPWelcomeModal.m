@@ -27,23 +27,13 @@
 
 - (void)display
 {
-//    CAKeyframeAnimation *displayAnimation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
-//    displayAnimation.values = @[@(-500), @(500), @(-500), @(500), @(-500)];
-//    displayAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-//    displayAnimation.duration = 3.0;
-//    displayAnimation.fillMode = kCAFillModeForwards;
-//    displayAnimation.removedOnCompletion = NO;
-//    
-//    [self.layer addAnimation:displayAnimation forKey:@"displayWelcomeModal"];
-    
-    
     //1 - Translation
     CABasicAnimation *translation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
     translation.toValue = @(-470);
     
     //2 - Scale
     CABasicAnimation *scale = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-    scale.fromValue = @(0.3);
+    scale.fromValue = @(0.0);
     scale.toValue = @(1.0);
     
     CAAnimationGroup *group = [CAAnimationGroup animation];
@@ -51,9 +41,35 @@
     group.duration = 0.5;
     group.fillMode = kCAFillModeForwards;
     group.removedOnCompletion = NO;
-//    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
-    [self.layer addAnimation:group forKey:@"group"];
+    [self.layer addAnimation:group forKey:@"basicGroupDisplay"];
+}
+
+- (void)displayKeyFrame
+{
+    NSArray *times = @[@(0.0), @(0.5), @(1)];
+    
+    //1 - Translation
+    CAKeyframeAnimation *translation = [CAKeyframeAnimation animationWithKeyPath:@"transform.translation.y"];
+    translation.values = @[@(-100), @(-270), @(-470)];
+    translation.keyTimes = times;
+    translation.calculationMode = kCAAnimationCubicPaced;
+    
+    CAKeyframeAnimation *scale = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
+    scale.values = @[@(0.0), @(0.5), @(1.0)];
+    scale.keyTimes = times;
+    scale.calculationMode = kCAAnimationCubicPaced;
+    
+    CAAnimationGroup *group = [CAAnimationGroup animation];
+    group.animations = @[scale, translation];
+    group.duration = 1.0;
+    group.fillMode = kCAFillModeForwards;
+    group.removedOnCompletion = NO;
+    
+    
+    
+    [self.layer addAnimation:group forKey:@"keyFrameGroupDisplay"];
 }
 
 - (void)dismiss
@@ -74,7 +90,7 @@
     group.removedOnCompletion = NO;
     //    group.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
-    [self.layer addAnimation:group forKey:@"group2"];
+    [self.layer addAnimation:group forKey:@"basicGroupDismiss"];
 }
 
 @end

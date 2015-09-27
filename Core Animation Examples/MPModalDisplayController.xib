@@ -29,20 +29,28 @@
                     <animations/>
                     <color key="backgroundColor" red="0.33725490200000002" green="0.4549019608" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewx-9A-y6Q">
+                    <rect key="frame" x="8" y="530" width="93" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Display Basic"/>
+                    <connections>
+                        <action selector="showWelcomeModal:" destination="-1" eventType="touchUpInside" id="0TE-C2-xBn"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDq-2A-sFg">
-                    <rect key="frame" x="226" y="530" width="54" height="30"/>
+                    <rect key="frame" x="258" y="530" width="54" height="30"/>
                     <animations/>
                     <state key="normal" title="Dismiss"/>
                     <connections>
                         <action selector="dismissWelcomeModal:" destination="-1" eventType="touchUpInside" id="Afr-HE-Czz"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewx-9A-y6Q">
-                    <rect key="frame" x="40" y="530" width="50" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zN-1L-SGH" userLabel="Display KF">
+                    <rect key="frame" x="135" y="530" width="74" height="30"/>
                     <animations/>
-                    <state key="normal" title="Display"/>
+                    <state key="normal" title="Display KF"/>
                     <connections>
-                        <action selector="showWelcomeModal:" destination="-1" eventType="touchUpInside" id="0TE-C2-xBn"/>
+                        <action selector="showWelcomeModalKeyFrame:" destination="-1" eventType="touchUpInside" id="zUV-oK-Ndf"/>
                     </connections>
                 </button>
             </subviews>
